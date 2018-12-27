@@ -55,21 +55,35 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-stream</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+    </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-parameter-names</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.23</version>
         </dependency>
     </dependencies>
 <dependencyManagement>
@@ -89,18 +103,35 @@
         <scope>import</scope>
     </dependency>
 </dependencies>
+
 </dependencyManagement>
+    <repositories>
+        <repository>
+            <id>frame-releases</id>
+            <url>http://47.106.212.169:8081/repository/frame-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>frame-snapshots</id>
+            <url>http://47.106.212.169:8081/repository/frame-snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <!--maven nexus私服配置-->
     <distributionManagement>
         <repository>
-            <id>releases</id>
+            <id>nexus3</id>
             <name>nexus-releases</name>
-            <url>http://47.106.212.169:8081/nexus/content/repositories/releases/</url>
+            <url>http://47.106.212.169:8081/repository/frame-releases/</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
+       <snapshotRepository>
+            <id>nexus3</id>
             <name>nexus-snapshots</name>
-            <url>http://47.106.212.169:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://47.106.212.169:8081/repository/frame-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
