@@ -162,6 +162,9 @@
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-httpasyncclient:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-spring-webmvc:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-servlet:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.31" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.31" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.54" level="project" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatisplus-maven-plugin:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:2.0" level="project" />
